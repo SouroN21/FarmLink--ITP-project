@@ -1,0 +1,55 @@
+// ExpertForm.scss
+.form-container {
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #a09e9e;
+    border-radius: 8px;
+    background-color:#30532733;;
+    color: black;
+    font-size: medium;
+  }
+  
+  .form-title {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .form-group {
+    margin-bottom: 2px;
+  
+    label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: rgb(79, 79, 79);
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color:rgba(42, 137, 47, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  

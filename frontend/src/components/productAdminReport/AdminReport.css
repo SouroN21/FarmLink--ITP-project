@@ -1,0 +1,48 @@
+.download-button {
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 40px 350px ;
+    margin-top: 4rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+  
+
+  .card-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .quantity-details,
+  .financial-summary {
+    margin-bottom: 20px;
+  }
+  
+  .download-button {
+    margin-top: 20px;
+  }
+  .charts-container {
+    display: flex;
+    gap:6rem
+  }
+  
+  
+  .charts-container {
+  display: flex;
+  gap: 20px; /* Adjust the gap value as needed */
+}
+
+@media screen and (max-width: 768px) {
+  .charts-container {
+    flex-direction: column;
+  }
+}

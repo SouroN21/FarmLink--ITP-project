@@ -1,0 +1,259 @@
+.cart-card {
+    max-width: 1000px;
+    margin: 2vh auto;
+    border: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 0 1rem 1rem 1rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .card-top {
+        padding: 0.7rem 1rem;
+    }
+}
+
+.icons21 {
+    margin-left: auto;
+}
+
+.class21 span {
+    color: black;
+    font-size: 20px;
+}
+
+.class21 {
+    padding: 3vh 0;
+}
+
+/* CSS */
+.input21-cart {
+    border: 2px solid rgba(0, 0, 0, 0.515);
+    padding: 2vh;
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+    outline: none;
+    width: 80%;
+    background-color: rgb(247, 247, 247);
+    font-family: Graphik, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    line-height: 1.15;
+    border-radius: 8px;
+  }
+  
+  .input21-cart:hover {
+    background-color: rgba(255, 255, 255, 0.041);
+    border-color: #1652F0;
+  }
+  
+
+
+
+.left21 {
+    
+    border-color: black;
+    border-radius: 10px;
+    background-color: #cfcece55;
+    padding: 2vh;
+}
+
+.left21 img {
+    width: 2rem;
+}
+
+.right21 .item {
+    padding: 0.3rem 0;
+}
+
+.right21 {
+    border-radius: 10px;
+    background-color: #cfcece55;
+    padding: 2vh;
+}
+
+.row21{
+  font-size: large;
+}
+.name21{
+width: 25%;
+}
+
+.lower21 {
+    margin-top: 1%;
+    line-height: 1.2;
+    font-size: 20px;
+    color: black;
+   /* background-color: rgb(138, 138, 138);*/
+}
+
+
+/* CSS */
+.cart-header21 {
+    font-size: 2.5rem;
+    margin-bottom: 2%;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      
+}
+
+.button-27 {
+    appearance: none;
+    background-color: #08cdf9ef;
+    border: 1px solid #1a1a1aa9;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 2%;
+    min-height: 50px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+  }
+  
+  .button-27:disabled {
+    pointer-events: none;
+  }
+  
+  .button-27:hover {
+    background-color: #0039D7;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+
+
+
+#cvv {
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+/*coupon*/
+.coupon-input {
+    border: 2px solid #1652F0; 
+    border-radius: 4px; 
+    padding: 8px 14px; 
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    outline: none;
+    width: 75%;
+    background-color: #FFFFFF; 
+    color: #333333; 
+    font-size: 14px;
+  }
+  
+  .coupon-input:focus {
+    border-color: #0A46E4;
+  }
+  
+  .coupon-input::placeholder {
+    color: #5f5f5f; 
+  }
+  
+  .coupon-input:hover {
+    border-color: #0A46E4; /* Change border color on hover */
+  }
+  
+
+/*coupon*/
+.coupon-btn {
+    appearance: button;
+    background-color: #1652F0;
+    border: 1px solid #1652F0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Graphik, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    line-height: 1.15;
+    overflow: visible;
+    padding: 12px 16px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: all 80ms ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    margin-bottom: 1vh;
+  }
+  
+  .coupon-btn:disabled {
+    opacity: .5;
+  }
+  
+  .coupon-btn:focus {
+    outline: 0;
+  }
+  
+  .coupon-btn:hover {
+    background-color: #0A46E4;
+    border-color: #0A46E4;
+  }
+  
+  .coupon-btn:active {
+    background-color: #0039D7;
+    border-color: #0039D7;
+  }
+  
+/* Modal */
+.cart-modal {
+    display: block; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.cart-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.cart-close {
+    color: #fe0000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

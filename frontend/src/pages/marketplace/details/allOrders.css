@@ -1,0 +1,367 @@
+.allorders{
+   padding: 5%;
+   background-color: #ffffff;
+   margin-top: -2%;
+}
+/* Container for order results */
+.order-result {
+   margin-bottom: 15px;
+}
+
+/* Styling for order stats */
+.order-stats21 {
+   display: flex;
+   justify-content: space-between;
+}
+
+/* Styling for individual order stat boxes */
+.order-stat-box211 {
+   background-color: blueviolet;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow:  8px 8px 8px rgba(0, 0, 0, 0.5);
+   flex-basis: 23%;
+   text-align: center;
+   transition: transform 0.3s ease;
+}
+.order-stat-box212 {
+   background-color: green;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow:  8px 8px 8px rgba(0, 0, 0, 0.5);
+   flex-basis: 23%;
+   text-align: center;
+   transition: transform 0.3s ease;
+}
+.order-stat-box213 {
+   background-color: blue;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow:  8px 8px 8px rgba(0, 0, 0, 0.5);
+   flex-basis: 23%;
+   text-align: center;
+   transition: transform 0.3s ease;
+}
+.order-stat-box214 {
+   background-color: #e9270a;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow:  8px 8px 8px rgba(0, 0, 0, 0.5);
+   flex-basis: 23%;
+   text-align: center;
+   transition: transform 0.3s ease;
+}
+
+.order-stat-box211:hover {
+   transform: translateY(-5px);
+}
+.order-stat-box212:hover {
+   transform: translateY(-5px);
+}
+.order-stat-box213:hover {
+   transform: translateY(-5px);
+}
+.order-stat-box214:hover {
+   transform: translateY(-5px);
+}
+
+/* Styling for headings in order stat boxes */
+.order-stat-box211 h3 {
+   color: white;
+   font-size: 18px;
+   margin-bottom: 8px;
+}
+
+/* Styling for content in order stat boxes */
+.order-stat-box211 p {
+   font-size: 16px;
+   margin: 0;
+   color: white;
+}
+/* Styling for headings in order stat boxes */
+.order-stat-box212 h3 {
+   color: white;
+   font-size: 18px;
+   margin-bottom: 8px;
+}
+
+/* Styling for content in order stat boxes */
+.order-stat-box212 p {
+   font-size: 16px;
+   margin: 0;
+   color: white;
+}
+/* Styling for headings in order stat boxes */
+.order-stat-box213 h3 {
+   color: white;
+   font-size: 18px;
+   margin-bottom: 8px;
+}
+
+/* Styling for content in order stat boxes */
+.order-stat-box213 p {
+   font-size: 16px;
+   margin: 0;
+   color: white;
+}
+/* Styling for headings in order stat boxes */
+.order-stat-box214 h3 {
+   color: rgb(255, 255, 255);
+   font-size: 18px;
+   margin-bottom: 8px;
+}
+
+/* Styling for content in order stat boxes */
+.order-stat-box214 p {
+   font-size: 16px;
+   margin: 0;
+   color: #ffffff;
+}
+
+
+
+ /* Container for buttons and search */
+.cl21 {
+   display: flex;
+   margin-left: 20px;
+   margin-right: 20px;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1%;
+   border-radius: 5px;
+   background-color: #ffffff;
+}
+
+/* Styling for buttons */
+.btn21 {
+   padding: 8px 16px;
+   border-radius: 4px;
+   cursor: pointer;
+   outline: none;
+   border: none;
+   transition: background-color 0.3s ease;
+}
+
+.btn-primary21 {
+   background-color: #007bff;
+   color: #fff;
+}
+
+.btn-secondary21 {
+   background-color: #6c757d;
+   color: #fff;
+}
+.btn-thee21 {
+   background-color: red;
+   color: #fff;
+}
+
+.btn21:hover {
+   opacity: 0.8;
+}
+
+/* Styling for search input */
+.order-search-input21 {
+   padding: 8px;
+   border-radius: 4px;
+   border: 1px solid #060606;
+   margin-right: 8px;
+   width: 200px;
+   outline: none;
+}
+
+/* Styling for search button */
+.order-search21 {
+   padding: 8px 16px;
+   border-radius: 4px;
+   border: none;
+   cursor: pointer;
+   background-color: #28a745;
+   color: #fff;
+   outline: none;
+}
+
+.order-search21:hover {
+   background-color: #218838;
+}
+
+
+/*table*//* Styling for the order table container */
+.order-table-container21 {
+   margin-top: 3px;
+   padding: 20px;
+   background-color: #ffffff; /* White background */
+}
+
+/* Styling for the order table */
+.order-table21 {
+   width: 100%;
+   border-collapse: collapse;
+   background-color: #cfe2f3; 
+
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the table header */
+.order-thead21 th {
+   background-color: #007bff; 
+   padding: 12px;
+   text-align: left;
+   font-weight: bold;
+   color: #ffffff;
+   border-radius: 5px;
+}
+
+/* Styling for table rows */
+.order-body21 tr:nth-child(even) {
+   color: #000;
+   background-color: #edf5ff; 
+}
+
+.order-body21 tr:nth-child(odd) {
+   color: #000;
+   background-color: #d6e9f9; 
+}
+
+/* Styling for table cells */
+.order-body21 td {
+   padding: 12px;
+   border-color: #0000004c;
+   border-bottom: 1px solid #000000; 
+}
+
+/* Styling for the select dropdown wrapper */
+.select-wrapper21 {
+   position: relative;
+   display: inline-block;
+}
+
+/* Styling for the select dropdown */
+.select-wrapper21 select {
+   padding: 8px 32px 8px 8px;
+   font-size: 14px;
+   border: none;
+   border-radius: 4px;
+   background-color: #f9f9f9;
+   cursor: pointer;
+}
+
+/* Styling for the arrow icon */
+.select-wrapper21::after {
+   content: '\25BC';
+   font-size: 14px;
+   position: absolute;
+   top: 50%;
+   right: 10px;
+   transform: translateY(-50%);
+   pointer-events: none;
+}
+
+
+
+/* Styling for the chart container */
+.chart-container21 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 20px;
+}
+
+/* Styling for the individual chart containers */
+.pie-chart-container,
+.bar-chart-container,
+.line-chart-container {
+   margin-bottom: 30px;
+}
+
+/* Styling for chart titles */
+.chart-container21 h2 {
+   font-size: 22px;
+   margin-bottom: 10px;
+   color: #333333; /* Dark gray */
+}
+
+/* Styling for the individual chart components */
+.pie-chart-container{
+   background-color: #f9f9f9; 
+   border-radius: 8px;
+   padding: 20px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   width: 30%;
+   max-width: 800px; 
+}
+.bar-chart-container,
+.line-chart-container {
+   background-color: #f9f9f9; /* Light gray background */
+   border-radius: 8px;
+   padding: 20px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   width: 100%;
+   max-width: 800px; 
+}
+
+/* Styling for the space between charts */
+.chart-container21 > *:not(:last-child) {
+   margin-bottom: 30px;
+}
+
+
+/* Styling for the popup container */
+.popup21 {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5); 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 999; 
+}
+
+/* Styling for the popup content */
+.popup-content21 {
+   background-color: #ffffff; /* White background */
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   width: 400px; /* Adjust width as needed */
+   text-align: center;
+}
+
+/* Styling for the popup title */
+.popup-content21 h2 {
+   font-size: 20px;
+   margin-bottom: 20px;
+   color: #333333; /* Dark gray */
+}
+
+/* Styling for the button container */
+.button-container21 {
+   display: flex;
+   justify-content: center;
+}
+
+/* Styling for the buttons */
+.button-container21 button {
+   padding: 10px 20px;
+   margin: 0 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+/* Styling for the 'Update' button */
+.button-container21 button:first-child {
+   background-color: #007bff; /* Blue color */
+   color: #ffffff; /* White text */
+}
+
+/* Styling for the 'Cancel' button */
+.button-container21 button:last-child {
+   background-color: #dc3545; /* Red color */
+   color: #ffffff; /* White text */
+}
+
+

@@ -1,0 +1,63 @@
+.add-product {
+  
+    margin-bottom: 5rem;
+    display: flex; /* Use flexbox to align children */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically (optional, if you want vertical centering) */
+    height: 100%; /* Provide a height if you're using align-items to center vertically */
+
+    .card {
+      width: 100%;
+      max-width: 500px;
+      padding: 1rem;
+    }
+    form {
+      label {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--color-dark);
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="file"],
+      input[type="email"],
+      select,
+      input[type="password"] {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 300;
+        padding: 1rem;
+        margin: 1rem auto;
+        width: 100%;
+        border: 1px solid #777;
+        border-radius: 3px;
+        outline: none;
+      }
+    }
+  }
+  
+  .group {
+    border: 1px solid var(--dark-blue);
+    padding: 5px;
+  }
+  
+  .image-preview {
+    width: 60%;
+    height: 70%;
+    max-height: 380px;
+    background: var(--dark-blue);
+    padding: 1rem;
+    border-radius: 3px;
+    overflow: hidden;
+    // display: none;
+    transition: all 0.3s;
+  }
+  
+  .image-preview img {
+    width: 100%;
+  }
+  
+  .image-show {
+    display: block;
+  }

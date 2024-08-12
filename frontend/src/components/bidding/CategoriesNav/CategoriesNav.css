@@ -1,0 +1,51 @@
+#categories {
+    text-align: center;
+    padding: 5%;
+}
+
+#categories>h1 {
+    font-family: serif;
+    margin-bottom: 3%;
+}
+
+#categories svg {
+    margin-bottom: 2px;
+    margin-right: 20px;
+    width: 15px;
+    height: 15px;
+}
+
+#categories a button{
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#all>svg {
+    color: #f15f5f;
+}
+
+#fruits>svg {
+    color: #d79162;
+}
+
+
+#vegetables>svg {
+    color: #5aeb5a;
+}
+
+#grain>svg {
+    color: #c0c454;
+}
+
+.spinner {
+    text-align: center;
+}
+
+.divider{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+

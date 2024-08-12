@@ -1,0 +1,67 @@
+.add-bidding {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  
+    .card {
+      width: 100%;
+      max-width: 500px;
+      padding: 1rem;
+  
+      form {
+        label {
+          display: block;
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: var(--color-dark);
+        }
+  
+        input[type="text"],
+        input[type="number"],
+        input[type="file"],
+        select {
+          display: block;
+          font-size: 1.6rem;
+          font-weight: 300;
+          padding: 1rem;
+          margin: 1rem auto;
+          width: 100%;
+          border: 1px solid #232323;
+          border-radius: 3px;
+          outline: none;
+          box-sizing: border-box;
+        }
+  
+        .image-preview {
+          width: 100%;
+          height: auto;
+          max-height: 380px;
+          background: var(--dark-blue);
+          padding: 1rem;
+          border-radius: 3px;
+          overflow: hidden;
+          transition: all 0.3s;
+  
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  
+  .group {
+    border: 1px solid var(--dark-blue);
+    padding: 5px;
+  }
+  
+  .image-show {
+    display: block;
+  }
+  
+  .error{
+    color: red;
+  }

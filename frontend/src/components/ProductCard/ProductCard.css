@@ -1,0 +1,138 @@
+.card-img-top {
+    height: 230px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card {
+    margin-bottom: 15%;
+}
+
+.card-text {
+    text-align: right;
+    font-weight: bold;
+}
+
+.card-footer {
+    text-align: right;
+}
+
+#heartIcon {
+    font-size: 16pt;
+    margin-left: 5%;
+}
+
+.hover-green:hover {
+    color: rgba(101, 221, 101, 0.741); 
+}
+.custom-rounded {
+    border-radius: 20px; /* Or any other value */
+    background-color: #f5f2cc57;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden; 
+}
+
+.see-preview-btn {
+    border-radius: 20px;
+    height: 3rem;
+    width: 8rem;
+    background-color: black;
+    position: absolute;
+    bottom: 20px; 
+    left: 10%;
+    opacity: 0; 
+    visibility: hidden; 
+   
+    
+}
+
+.product-card:hover .see-preview-btn {
+    display: block;
+    background-color: black;
+    opacity: 1; 
+    visibility: visible; 
+    margin: 0rem 4rem 0rem 10rem;
+    
+}
+
+
+
+.product-card {
+    height: 400px; 
+}
+
+.out-of-stock-message {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #ff3b3b; 
+    color: #ffffff; 
+    padding: 5px 10px 5px 10px; 
+    border-radius: 5px; 
+    font-size: 14px; 
+    display: block; /* Always display the message */
+}
+
+
+.price-offer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer-details {
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.offer-text {
+ background-color: #ff3b3b;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fefefe;
+}
+
+.original-price {
+    /* Your styles for the original price text */
+    text-decoration: line-through;
+    color: #787878;
+    font-size: 20px; 
+    font-weight: 300;
+  }
+
+  .discounted-price {
+    /* Your styles for the discounted price text */
+    font-weight: 700;
+    color: #ff3b3b;
+    font-size: 20px 
+  }
+  
+  .discount-percentage {
+    color: #ff3b3b;
+    font-size: 18px;
+  }
+  .offer-coupon{
+    padding-top: 1rem;
+    font-size: 12px;
+    width: 100%;
+  }
+.offer-coupon-text {
+    font-weight: bold;
+    color: #000000;
+}
+.offer-coupon-code {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    background-color: rgb(188, 183, 183);
+    color: #000000;
+}

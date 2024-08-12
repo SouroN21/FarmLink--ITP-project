@@ -1,0 +1,24 @@
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.products-table th,
+.products-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: #333; /* Adjusted text color */
+}
+
+.products-table th {
+    background-color: #f4f4f4;
+}
+
+.products-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.products-table tr:hover {
+    background-color: #f1f1f1;
+}

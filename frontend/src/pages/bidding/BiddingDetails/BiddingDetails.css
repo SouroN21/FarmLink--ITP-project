@@ -1,0 +1,116 @@
+body {
+    overflow-x: hidden;
+  }
+  .counter {
+      font-family: Arial, sans-serif;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    
+    .count-button {
+      width: 40px;
+      height: 32px;
+      border: 1px solid #cf740b;
+      background-color: #dc9c3d;
+      cursor: pointer;
+      user-select: none;
+      color: #340202;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .count-button2 {
+      width: 40px;
+      height: 32px;
+      border: 1px solid #cf740b;
+      background-color: #dc9c3d;
+      cursor: pointer;
+      user-select: none;
+      color: #340202;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .counter-button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+    
+    .counter-input {
+      width: 50px;
+      padding: 5px;
+      text-align: center;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      margin: 0 5px;
+    }
+    
+    .counter-stock {
+      margin-left: 10px;
+      color: #666;
+      font-size: 14px;
+    }
+  
+    .btn-warning:disabled{
+      
+      background: #ff0000;
+      border: 1px solid #ff0000;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: black;
+    }
+  
+    .product-card-sm {
+      max-width: 200px;
+  }
+  
+  .product-card-sm .card-img-top {
+      height: 150px; /* Adjust as needed */
+      object-fit: cover;
+  }
+  
+  .product-card-sm .card-title {
+      font-size: 16px;
+  }
+  
+  .product-card-sm .card-text {
+      font-size: 14px;
+  }
+  
+  .product-card-sm .see-preview-btn {
+      font-size: 12px;
+  }
+  
+  .overflow-scroll {
+    
+    white-space: nowrap;
+    animation: scrollAnimation 10s linear infinite;
+    animation-play-state: running; 
+  }
+  
+  .overflow-scroll:hover {
+    animation-play-state: paused; 
+  }
+  
+  @keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+  
+  .Footer {
+    margin-top: 5rem;
+  }
+
+  

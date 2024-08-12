@@ -1,0 +1,68 @@
+.card-img-top {
+    height: 230px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card {
+    margin-bottom: 15%;
+    padding: 50px 50px;
+    margin: 5% 5% 5% 5%;
+}
+
+.card-text {
+    text-align: right;
+    font-weight: bold;
+}
+
+.card-footer {
+    text-align: right;
+}
+
+#heartIcon {
+    font-size: 16pt;
+    margin-left: 5%;
+}
+
+.hover-green:hover {
+    color: rgba(101, 221, 101, 0.741); 
+}
+.custom-rounded {
+    border-radius: 20px; 
+    background-color: #f5f2cc57;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden; 
+}
+
+.see-preview-btn {
+    border-radius: 20px;
+    height: 3rem;
+    width: 8rem;
+    background-color: black;
+    position: absolute;
+    bottom: 20px; 
+    left: 15%;
+    opacity: 0; 
+    visibility: hidden;   
+}
+
+.product-card:hover .see-preview-btn {
+    display: block;
+    background-color: black;
+    opacity: 1; 
+    visibility: visible; 
+    margin: 0rem 4rem 0rem 10rem;
+    bottom: 15px; /* Adjust bottom spacing as needed */
+    transform: translateX(-50%); /* Center the button horizontally */
+}
+
+.product-card {
+    height: 400px; 
+}
+
+
+
+

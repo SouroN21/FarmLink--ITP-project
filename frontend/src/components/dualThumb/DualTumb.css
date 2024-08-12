@@ -1,0 +1,92 @@
+.dual-thumb-range-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+  }
+  
+  .thumb {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+  }
+  
+  /* Style for webkit browsers like Chrome, Safari */
+  .thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 19px;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+    /* Center the thumb vertically by calculating half the thumb's height minus half the track's height */
+    margin-top: calc(-10px - (20px / 2));
+  }
+  
+  /* Style for Firefox */
+  .thumb::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #010000;
+    cursor: pointer;
+    border-radius: 50%;
+    /* Same adjustment for Firefox */
+    margin-top: calc(5px - (20px / 2));
+  }
+  
+  .slider {
+    position: relative;
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+  
+  .slider__track,
+  .slider__range {
+    position: absolute;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .slider__track {
+    width: 100%;
+  }
+  
+  .slider__range {
+    background: #000000;
+    z-index: 1;
+  }
+  
+  .slider__left-value
+  {
+    
+        position: absolute;
+        background: #ff0000; /* Example background color, use your desired color */
+        color: #fff;
+        font-size: 12px;
+        padding: 4px 12px; /* Adjust the padding to match your design */
+        border-radius: 12px; /* Rounded corners */
+        top: -45px; /* Position above the thumb */
+        transform: translateX(-50%);
+        white-space: nowrap;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
+      
+      
+  }
+  .slider__right-value {
+    position: absolute;
+    background: #39ff16; /* Example background color, use your desired color */
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 12px; /* Adjust the padding to match your design */
+    border-radius: 12px; /* Rounded corners */
+    top: -45px; /* Position above the thumb */
+    transform: translateX(-50%);
+    white-space: nowrap;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
+  }
+  
+  

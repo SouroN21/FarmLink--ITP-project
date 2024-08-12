@@ -1,0 +1,56 @@
+.expert-details {
+    color: black;
+    margin: 50px;
+    font-size: medium;
+  
+    .expert-details-title {
+      font-size: 24px;
+      margin-bottom: 50px;
+      text-align: center;
+      font-weight: bold;
+    }
+  
+    .expert-card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* Adjust the gap between cards */
+    }
+  
+    .expert-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+  
+      .expert-name {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+  
+      .expert-email,
+      .expert-expertise,
+      .expert-location {
+        margin-bottom: 5px;
+      }
+  
+      .expert-picture {
+        width: 200px;
+        height: 200px;
+        border-radius: 5px;
+      }
+  
+      .submit-button {
+        background-color: rgba(42, 137, 47, 0.8); /* Green with 50% transparency */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+  
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  

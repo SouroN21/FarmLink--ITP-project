@@ -1,0 +1,70 @@
+.bidding-list {
+    max-width: 1000px;
+    margin: 20px;
+    color: black;
+    font-size: medium;
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 50px;
+      text-align: center;
+      font-weight: bold;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th, td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+  
+      th {
+        background-color: rgba(42, 137, 47, 0.5); /* Light green color with 50% transparency */
+        font-weight: bold;
+      }
+    }
+  
+    .update-form-container {
+      max-width: 550px;
+      margin-top: 50px;
+      margin-left: 20%;
+      margin-bottom: 50px;
+      padding: 20px;
+      border: 1px solid #a09e9e;
+      border-radius: 8px;
+      background-color: #cccccc68;
+  
+      h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+  
+        .form-label {
+          font-weight: bold;
+        }
+  
+        input[type="text"],
+        input[type="date"],
+        textarea {
+          padding: 8px;
+          border: 1px solid #232323;
+          border-radius: 3px;
+        }
+  
+        textarea {
+          resize: vertical; /* Allow vertical resizing */
+          min-height: 100px; /* Set a minimum height */
+        }
+      }
+    }
+
+  }
