@@ -25,7 +25,7 @@ function MarketplaceNavbar({ children, showCategories = true }) {
 
     useEffect(() => {
         fetchCart();
-        const intervalId = setInterval(() => fetchCart(), 1000); // Poll every 5 seconds
+        const intervalId = setInterval(() => fetchCart(), 1000); 
         return () => clearInterval(intervalId);
     }, []);
 
@@ -59,8 +59,8 @@ function MarketplaceNavbar({ children, showCategories = true }) {
                                     width: "80px",
                                     display: "inline",
                                     padding: "10px",
-                                    backgroundColor: "rgba(255, 255, 255, 0.5)", // Transparent white background
-                                    border: "1px solid black", // Black border
+                                    backgroundColor: "rgba(255, 255, 255, 0.5)", 
+                                    border: "1px solid lightblue", 
                                     borderRadius: "5px"
                                 }}>
                                     <FaShoppingCart style={{

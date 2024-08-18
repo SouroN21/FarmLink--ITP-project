@@ -29,7 +29,7 @@ function Cart() {
 
         fetchCart();
     }, []);
-    console.log(userid);
+    console.log(userid);  
     const handleDeleteItem = async (itemId) => {
         try {
             await axios.delete(`http://localhost:5000/api/cart/delete/${itemId}`);
@@ -134,7 +134,7 @@ function Cart() {
                     <div className="check-title">
                         <div className="row21">
                             <div className="col"><h4><b>Shopping Cart</b></h4></div>
-                            <div className="col align-self-center text-right text-muted">{cart.items.length} items</div>
+                            <div className="text-right col align-self-center text-muted">{cart.items.length} items</div>
                         </div>
                     </div>
                     {cart.items.map((item) => (
@@ -166,12 +166,12 @@ function Cart() {
                     <hr className="check-hr"/>
                     <div className="row">
                         <div className="col" style={{ paddingLeft: 0 }}>ITEMS {cart.items.length}</div>
-                        <div className="col text-right"> $ {totalAmount.toFixed(2)}</div>
+                        <div className="text-right col"> $ {totalAmount.toFixed(2)}</div>
                     </div>
                     
                     <div className="row" style={{ borderTop: '1px solid rgba(0,0,0,.1)', padding: '2vh 0' }}>
                         <div className="col">TOTAL PRICE</div>
-                        <div className="col text-right"> $ {totalAmount.toFixed(2)}</div>
+                        <div className="text-right col"> $ {totalAmount.toFixed(2)}</div>
                     </div>
                     <button className="check-btn" onClick={handleCheckout}>CHECKOUT</button>
                 </div>
