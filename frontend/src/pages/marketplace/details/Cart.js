@@ -4,6 +4,7 @@ import './Cart.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import GlobalStyles from '../../../GlobalStyles';
+import {loadStripe} from '@stripe/stripe-js';
 let userid;
 function Cart() {
     const [cart, setCart] = useState(null);
@@ -47,7 +48,7 @@ function Cart() {
 
     const handleUpdateQuantity = async (itemId, newQuantity) => {
         try {
-            const response = await axios.put(`http://localhost:5000/api/cart/updateQuantity/${itemId}`, { quantity: newQuantity });
+            const response = await axios.put(`http://localhost:5000/api/cart/updateQuantity/${itemId}, { quantity: newQuantity }`);
             // Update quantity for the item in the cart
             setCart(prevCart => ({
                 ...prevCart,
@@ -59,11 +60,48 @@ function Cart() {
             toast.error('Failed to update item quantity.');
         }
     };
-
-    const handleCheckout = () => {
-        // Redirect to the correct checkout page with cart ID
-        window.location.href = `/cartcheckout/${cart._id}`;
+    const handleCheckout = async () => {
+        const stripe = await loadStripe("pk_test_51P8ydARumMKpvWOPVewV4aTPZwb8rxOkeZ29dEYd28LkiNnlqxd1bkIa7RwxzGqFo9dZRBmdkm2juSs1frAcZL3h00HCHxr9r3"); 
+        
+        const body = {
+            products: cart.items.map(item => ({
+                name: item.productName,
+                image: item.imageUrl,
+                price: item.productPrice,
+                quantity: item.quantity,
+            })),
+        };
+    
+        const headers = { "Content-Type": "application/json" };
+    
+        try {
+            const response = await fetch('http://localhost:5000/api/pay/create-checkout-session', {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify(body),
+            });
+    
+            if (!response.ok) {
+                throw new Error('Failed to create checkout session');
+            }
+    
+            const session = await response.json();
+    
+            // Store cartId in localStorage or URL parameter
+            localStorage.setItem('cartId', cart._id);
+    
+            const result = await stripe.redirectToCheckout({ sessionId: session.id });
+    
+            if (result.error) {
+                console.error(result.error.message);
+                toast.error(result.error.message);
+            }
+        } catch (err) {
+            console.error('Error during checkout:', err);
+            toast.error('Failed to initiate checkout.');
+        }
     };
+    
     
 
     
@@ -71,7 +109,55 @@ function Cart() {
    
 
     if (error) {
-        return <div style={{marginLeft: "40rem" , alignItems:"center"}}><GlobalStyles>/</GlobalStyles>Cart is empty.</div>;
+        return (<div style={{ marginTop: '100px', padding: '0 15px' }}>
+            <div style={{
+                marginBottom: '30px',
+                border: '0',
+                borderRadius: '8px',
+                boxShadow: '1px 5px 24px 0 rgba(68,102,242,.05)'
+            }}>
+                <div style={{
+                    backgroundColor: '#fff',
+                    borderBottom: '1px solid #f6f7fb',
+                    padding: '24px',
+                    borderTopLeftRadius: '8px',
+                    borderTopRightRadius: '8px'
+                }}>
+                
+                </div>
+                <div style={{
+                    padding: '30px',
+                    backgroundColor: 'transparent'
+                }}>
+                    <div style={{ textAlign: 'center' }}>
+<img
+    src="https://i.imgur.com/dCdflKN.png"
+    width="130"
+    height="130"
+    alt="Empty Cart"
+    style={{ display: 'block', margin: '0 auto 1rem auto' }}
+/>
+<h3 style={{ fontSize: '1.5rem' }}>
+    <strong>Your Cart is Empty</strong>
+</h3>
+<h4 style={{ fontSize: '1.25rem' }}>Add something to make me happy :)</h4>
+<a href="/*" style={{
+    display: 'inline-block',
+    padding: '10px 20px',
+    marginTop: '1rem',
+    backgroundColor: '#4466f2',
+    color: '#fff',
+    textDecoration: 'none',
+    borderRadius: '5px',
+    fontSize: '1rem',
+    cursor: 'pointer'
+}}>Continue Shopping</a>
+</div>
+
+                </div>
+            </div>
+        </div>
+   )
     }
 
     if (!cart || cart.items.length === 0) {

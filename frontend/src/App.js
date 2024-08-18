@@ -50,7 +50,8 @@ import UpdateBuyer from "./components/marketplaceNav/UpdateBuyer";
 import BidCheckout from './pages/bidding/bidCheckout/BidCheckout';
 import AllFeedbacks from "./components/Allfeedbacks";
 import BarChart from "./components/charts/ProductAdminOverviewTable";
-
+import Successful from "./pages/marketplace/details/successful";
+import Unuccessful from "./pages/marketplace/details/unuccessful";
 
 
 axios.defaults.withCredentials = true;
@@ -304,6 +305,9 @@ function App() {
                 <Checkout />
               </MarketplaceNavbar>
             } />
+           <Route path="/successful" element={<Successful />} />
+
+           <Route path="/unuccessful" element={<Unuccessful />} />
 
             <Route path="/cartcheckout/:cartId" element={<MarketplaceNavbar showCategories={false}><CartCheckout /></MarketplaceNavbar>} />
 

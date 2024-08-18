@@ -12,6 +12,7 @@ import Moment from 'react-moment';
 import AcceptedFeedbacks from '../../../components/Acceptedfeedbacks';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import {loadStripe} from '@stripe/stripe-js';
 let maxPiecesAvailable = 0;
 let userid;
 function ProductDetails() {
@@ -61,15 +62,12 @@ function ProductDetails() {
         if (productOwner) {
            
           const UserProducts =  await productService.getProductsById(productOwner._id)
-                setOtherProducts(UserProducts);
-                
-                
+                setOtherProducts(UserProducts);     
         }
     }
         getProductDataByUser();
     }, [productOwner]);
     
-   
     const incrementCount = () => {
         if (count < maxPiecesAvailable) {
             setCount(count + 1);
@@ -93,10 +91,50 @@ function ProductDetails() {
     if (!product) {
         return <div>Product not found.</div>;
     }
-    const buyNow = () => {
+    const buyNow = async () => {
+        const stripe = await loadStripe("pk_test_51P8ydARumMKpvWOPVewV4aTPZwb8rxOkeZ29dEYd28LkiNnlqxd1bkIa7RwxzGqFo9dZRBmdkm2juSs1frAcZL3h00HCHxr9r3"); // Publishable key
         
-        navigate(`/checkout/${productId}`, { state: { count } });
+        const body = {
+            products: [
+                {
+                    name: product.name,
+                    image: product.image.filePath,
+                    price: product.price,
+                    quantity: count,
+                },
+            ]
+        };
+    
+        const headers = { "Content-Type": "application/json" };
+    
+        try {
+            // Store product ID in local storage
+            localStorage.setItem('productId', product._id);
+            localStorage.setItem('count', count);
+            const response = await fetch('http://localhost:5000/api/pay/create-checkout-session', {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify(body),
+            });
+    
+            if (!response.ok) {
+                throw new Error('Failed to create checkout session');
+            }
+    
+            const session = await response.json();
+    
+            const result = await stripe.redirectToCheckout({ sessionId: session.id });
+    
+            if (result.error) {
+                console.error(result.error.message);
+                toast.error(result.error.message);
+            }
+        } catch (err) {
+            console.error('Error during checkout:', err);
+            toast.error('Failed to initiate checkout.');
+        }
     };
+    
 
     
     const addToCart = async () => {
@@ -130,7 +168,7 @@ function ProductDetails() {
         <> 
         <GlobalStyles/>
         <Container>
-            <Row className="justify-content-center my-3">
+            <Row className="my-3 justify-content-center">
                 <Col xs={12} md={5}>
                     {/* Display a single static image */}
                     <Card>
@@ -185,10 +223,10 @@ function ProductDetails() {
                                 <p className="counter-stock">{maxPiecesAvailable} Pieces available</p>
                             </div>
                             <div className="my-3">
-                            {product.quantity <= 0 ? (<Button variant="warning" size="lg" className="w-100 mb-2" disabled>
+                            {product.quantity <= 0 ? (<Button variant="warning" size="lg" className="mb-2 w-100" disabled>
                                     Out of Stock
                                 </Button>) : (
-                                <Button variant="warning" size="lg" className="w-100 mb-2" onClick={buyNow}>
+                                <Button variant="warning" size="lg" className="mb-2 w-100" onClick={buyNow}>
                                     Buy Now
                                 </Button>)}
                                 {product.quantity <= 0 ? ( <Button variant="outline-primary" size="lg" className="w-100" disabled>
@@ -218,11 +256,11 @@ function ProductDetails() {
             <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(product.description) }}></div>
 
                {/* Additional section for other products by the same owner */}
-               <Row className="justify-content-center my-3" >
+               <Row className="my-3 justify-content-center" >
                <h2 style={{marginTop:'10rem'}}>Other Products by {productOwner?.firstName}</h2>
                   <div className="overflow-scroll">
                 
-                <Row className="justify-content-start my-3 flex-nowrap">
+                <Row className="my-3 justify-content-start flex-nowrap">
                     {otherProducts.map((otherProduct) => (
                         <Col xs={12} md={6} lg={3} key={otherProduct._id.toString()}>
                             <ProductCard key={otherProduct._id} product={otherProduct} />

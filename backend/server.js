@@ -20,7 +20,7 @@ const orderRoutes = require("./Routes/orderRouter");
 const nodemailer = require('nodemailer');
 const buyerReqRoute =require("./Routes/BuyerReqRoute");
 const biddingRoute = require('./Routes/biddingRoute');
-
+const pay =require("./Routes/pay.js");
 const PORT = process.env.PORT || 2001;
 const app = express();
 const FRONTEND_URL = process.env.FRONTEND_URL;
@@ -41,7 +41,7 @@ app.use(cors({
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use(userManage);
-
+app.use("/api/pay",pay);
 app.use("/api/products", productRoute);
 app.use("/api/payment", paymentRouter);
 app.use("/delivery", deliveryRouter);
