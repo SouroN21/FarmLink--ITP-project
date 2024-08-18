@@ -40,9 +40,9 @@ function MarketplaceNavbar({ children, showCategories = true }) {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="/" style={{ marginLeft: "2rem" }}>Home</Nav.Link>
-                            <Nav.Link href="/market" style={{ marginLeft: "2rem" }}>Shop</Nav.Link>
-                            <Nav.Link href="/products" style={{ marginLeft: "2rem" }}>Products</Nav.Link>
+                            <Nav.Link href="/" style={{ marginLeft: "2rem", marginTop:"1rem" }}>Home</Nav.Link>
+                            <Nav.Link href="/market" style={{ marginLeft: "2rem", marginTop:"1rem" }}>Shop</Nav.Link>
+                            <Nav.Link href="/products" style={{ marginLeft: "2rem", marginTop:"1rem" }}>Products</Nav.Link>
                             {showCategories && (
                                 <NavDropdown title="Categories" id="basic-nav-dropdown" style={{ marginLeft: "2rem" }}>
                                     <NavDropdown.Item onClick={() => handleCategorySelect('Vegetable')}>Vegetables</NavDropdown.Item>
@@ -50,8 +50,8 @@ function MarketplaceNavbar({ children, showCategories = true }) {
                                     <NavDropdown.Item onClick={() => handleCategorySelect('all')}>All Categories</NavDropdown.Item>
                                 </NavDropdown>
                             )}
-                            <Nav.Link href="/bidding" style={{ marginLeft: "2rem", flex: "1" }}>BiddingHub</Nav.Link>
-                            <Nav.Link href="/bidding/bids" style={{ marginLeft: "2rem" }}>Biddings</Nav.Link>
+                            <Nav.Link href="/bidding" style={{ marginLeft: "2rem", marginTop:"1rem",flex: "1" }}>BiddingHub</Nav.Link>
+                            <Nav.Link href="/bidding/bids" style={{ marginLeft: "2rem" , marginTop:"1rem"}}>Biddings</Nav.Link>
 
                             <Dropdown align="end">
                                 <Dropdown.Toggle variant="success" style={{

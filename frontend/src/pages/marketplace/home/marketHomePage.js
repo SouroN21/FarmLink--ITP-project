@@ -46,7 +46,7 @@ const MarketplaceHomePage = () => {
     },
     {
       img: IMG4,
-      name: 'Naveen De Soisa',
+      name: 'Maniya De Soisa',
       description: 'Naveen has been instrumental in introducing new farming technologies in our region.'
     }
   ];
