@@ -147,6 +147,38 @@ router.put("/updateStatus/:orderId", async (req, res) => {
     }
 });
 
+// Get Orders by Product ID Route
+router.get("/product/:productId", async (req, res) => {
+    try {
+        const productId = req.params.productId;
 
+        // Find orders that contain the specific product ID
+        const orders = await Order.find({
+            'purchasedItems.product': productId
+        }).populate('purchasedItems.product', 'name price'); // Ensure product details are populated
+
+        // Filter the relevant product details within each order
+        const filteredOrders = orders.map(order => {
+            const relevantProduct = order.purchasedItems.filter(item => item.product.toString() === productId);
+            return {
+                _id: order._id,
+                customer: order.customer,
+                relevantProduct,
+                orderDate: order.orderDate,
+                orderStatus: order.orderStatus,
+                totalCost: order.totalCost,
+            };
+        });
+
+        if (filteredOrders.length === 0) {
+            return res.status(404).json({ message: "No orders found for this product" });
+        }
+
+        res.status(200).json(filteredOrders);
+    } catch (error) {
+        console.error("Fetching orders by product ID failed:", error);
+        res.status(500).json({ message: "Failed to fetch orders" });
+    }
+});
 
 module.exports = router;

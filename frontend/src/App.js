@@ -52,6 +52,7 @@ import AllFeedbacks from "./components/Allfeedbacks";
 import BarChart from "./components/charts/ProductAdminOverviewTable";
 import Successful from "./pages/marketplace/details/successful";
 import Unuccessful from "./pages/marketplace/details/unuccessful";
+import OrdersPage from "./pages/orders/OrdersPage";
 
 
 axios.defaults.withCredentials = true;
@@ -156,6 +157,16 @@ function App() {
                 <Sidebar>
                   <Layout>
                     <AddProduct />
+                  </Layout>
+                </Sidebar>
+              }
+            />
+            <Route
+              path="/my-orders"
+              element={
+                <Sidebar>
+                  <Layout>
+                    <OrdersPage />
                   </Layout>
                 </Sidebar>
               }

@@ -1,6 +1,7 @@
 import { FaTh, FaRegChartBar, FaCommentAlt , FaCalendarAlt , FaListAlt } from "react-icons/fa";
 import { BiImageAdd } from "react-icons/bi";
 import { MdCreate } from "react-icons/md";
+import { TbBusinessplan } from "react-icons/tb";
 
 const menu = [
   {
@@ -12,6 +13,11 @@ const menu = [
     title: "Add Product",
     icon: <BiImageAdd />,
     path: "/add-product",
+  },
+  {
+    title: "Orders",
+    icon: <TbBusinessplan />,
+    path: "/my-orders",
   },
   {
     title: "Account",
