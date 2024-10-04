@@ -110,7 +110,7 @@ export default function SuccessPage() {
       } else if (productDetails) {
         const { data: { quantity } } = await axios.get(`http://localhost:5000/api/products/getproductq/${productDetails._id}`);
         await axios.put(`http://localhost:5000/api/products/updateproduct/${productDetails._id}`, { quantity: quantity - count });
-        console.log(q);
+        //console.log(q);
         
       }
 
